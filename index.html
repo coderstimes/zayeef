@@ -1,584 +1,427 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>  Ahmed Zayeef </title>
-  <meta content="Ahmed Zayeef" name="description">
-  <meta content="Ahmed Zayeef, Huzaifa Muhammad, Prothom Alo Journalist" name="keywords">
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmed Zayeef — Journalism Scholar</title>
+<meta name="description" content="Ahmed Zayeef is a PhD candidate in the School of Journalism at Michigan State University. He studies journalism as a negotiated practice.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F8F7F3;
+    --ink:#20262D;
+    --ink-soft:#59616C;
+    --rule:#DBD8CF;
+    --red:#9E2B25;   /* editor's pencil */
+    --measure:66ch;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Source Serif 4",Georgia,serif;
+    font-size:1.06rem;
+    line-height:1.72;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--red);color:var(--paper);}
 
+  /* ---------- nav ---------- */
+  nav{
+    position:sticky;top:0;z-index:10;
+    background:color-mix(in srgb, var(--paper) 92%, transparent);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--rule);
+  }
+  .nav-inner{
+    max-width:52rem;margin:0 auto;padding:0.8rem 1.5rem;
+    display:flex;align-items:baseline;justify-content:space-between;gap:1rem;flex-wrap:wrap;
+  }
+  .nav-name{
+    font-family:"Besley",serif;font-weight:700;font-size:1rem;
+    letter-spacing:.01em;color:var(--ink);text-decoration:none;
+  }
+  .nav-links{display:flex;gap:1.35rem;flex-wrap:wrap;}
+  .nav-links a{
+    font-family:"IBM Plex Mono",monospace;font-size:.72rem;
+    letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink-soft);text-decoration:none;
+    padding-bottom:2px;border-bottom:1px solid transparent;
+  }
+  .nav-links a:hover,.nav-links a:focus-visible{color:var(--red);border-bottom-color:var(--red);}
+  a:focus-visible{outline:2px solid var(--red);outline-offset:3px;}
+
+  main{max-width:52rem;margin:0 auto;padding:0 1.5rem;}
+
+  /* ---------- hero / about ---------- */
+  header.hero{padding:5rem 0 1rem;}
+  .kicker{
+    font-family:"IBM Plex Mono",monospace;font-size:.74rem;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--red);
+    margin-bottom:1.1rem;
+  }
+  h1{
+    font-family:"Besley",serif;font-weight:700;
+    font-size:clamp(2.4rem,6vw,3.6rem);
+    line-height:1.08;letter-spacing:-0.012em;
+    margin-bottom:1.4rem;
+  }
+  .thesis{
+    font-family:"Besley",serif;font-style:italic;font-weight:400;
+    font-size:clamp(1.15rem,2.6vw,1.45rem);line-height:1.5;
+    color:var(--ink-soft);max-width:36ch;
+    border-left:3px solid var(--red);padding-left:1.1rem;
+    margin-bottom:2.5rem;
+  }
+  .portrait{
+    float:right;width:170px;aspect-ratio:4/5;margin:0 0 1rem 1.75rem;
+    border:1px solid var(--rule);background:#EDEBE4;
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    font-family:"IBM Plex Mono",monospace;font-size:.68rem;color:var(--ink-soft);
+    letter-spacing:.08em;padding:.75rem;
+  }
+  @media (max-width:560px){.portrait{float:none;margin:0 0 1.5rem;}}
+
+  /* ---------- sections ---------- */
+  section{padding:3.2rem 0;border-top:1px solid var(--rule);}
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace;font-size:.74rem;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--red);
+    margin-bottom:1.6rem;
+  }
+  h2{
+    font-family:"Besley",serif;font-weight:600;
+    font-size:1.55rem;line-height:1.25;margin-bottom:1.2rem;letter-spacing:-.005em;
+  }
+  p{max-width:var(--measure);margin-bottom:1.15rem;}
+  p:last-child{margin-bottom:0;}
+  em{font-style:italic;}
+  a{color:var(--red);text-decoration:none;border-bottom:1px solid color-mix(in srgb, var(--red) 35%, transparent);}
+  a:hover{border-bottom-color:var(--red);}
+
+  .citations{
+    margin-top:1.8rem;padding-top:1.4rem;border-top:1px dashed var(--rule);
+  }
+  .citations h3{
+    font-family:"IBM Plex Mono",monospace;font-size:.72rem;font-weight:500;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);
+    margin-bottom:.9rem;
+  }
+  .citations p{
+    font-size:.9rem;line-height:1.6;color:var(--ink-soft);
+    max-width:var(--measure);margin-bottom:.8rem;
+    padding-left:1.4rem;text-indent:-1.4rem; /* hanging indent, APA-style */
+  }
+  .citations + .citations{margin-top:2rem;}
+  .citations p strong{font-weight:600;color:var(--ink);}
+  .cite-award{
+    font-family:"IBM Plex Mono",monospace;font-size:.66rem;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--red);white-space:nowrap;
+  }
+  .cite-status{
+    font-family:"IBM Plex Mono",monospace;font-size:.66rem;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap;
+  }
+  .cite-sep{color:var(--rule);}
+
+  /* ---------- investigations ---------- */
+  .story{max-width:var(--measure);margin-bottom:2.4rem;}
+  .story:last-of-type{margin-bottom:0;}
+  .beat{
+    font-family:"IBM Plex Mono",monospace;font-size:.72rem;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--ink);
+    margin:2.6rem 0 1.5rem;padding-bottom:.55rem;border-bottom:1px solid var(--rule);
+  }
+  .dateline{
+    font-family:"IBM Plex Mono",monospace;font-size:.74rem;font-weight:500;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);
+    margin-bottom:.35rem;
+  }
+  .dateline b{color:var(--red);font-weight:500;}
+  .story h3{
+    font-family:"Besley",serif;font-weight:600;font-size:1.18rem;
+    line-height:1.35;margin-bottom:.45rem;
+  }
+  .story h3 a{color:var(--ink);border-bottom:1px solid var(--rule);}
+  .story h3 a:hover{color:var(--red);border-bottom-color:var(--red);}
+  .story p{font-size:.98rem;margin-bottom:0;}
+  .placeholder{
+    background:#EFEDE6;border:1px dashed var(--rule);
+    padding:1.1rem 1.3rem;font-family:"IBM Plex Mono",monospace;
+    font-size:.78rem;line-height:1.65;color:var(--ink-soft);max-width:var(--measure);
+  }
+
+  /* ---------- footer ---------- */
+  footer{
+    border-top:1px solid var(--rule);margin-top:3rem;
+    padding:2.6rem 1.5rem 3.4rem;
+  }
+  .foot-inner{max-width:52rem;margin:0 auto;}
+  .foot-links{
+    display:flex;gap:1.6rem;flex-wrap:wrap;margin-bottom:1.1rem;
+  }
+  .foot-links a{
+    font-family:"IBM Plex Mono",monospace;font-size:.76rem;
+    letter-spacing:.12em;text-transform:uppercase;
+  }
+  .foot-note{
+    font-family:"IBM Plex Mono",monospace;font-size:.7rem;
+    color:var(--ink-soft);letter-spacing:.06em;
+  }
+</style>
+</head>
 <body>
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="d-flex flex-column">
-
-      <div class="profile">
-        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="//ahmedzayeef.com/"> Ahmed Zayeef  </a></h1>
-        <div class="social-links mt-3 text-center">
-          <a href="//linkedin.com/in/ahmed-zayeef/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://www.facebook.com/ahmed.zayeef" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="https://twitter.com/AZayeef" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="https://www.instagram.com/ahmedzayeef/" class="instagram"><i class="bx bxl-instagram"></i></a>
-        </div>
-      </div>
-
-      <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="index.html#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li class="d-none"><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="#Works" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Works</span></a></li>
-          <li><a href="#awards" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Awards</span></a></li>
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
+<nav aria-label="Site">
+  <div class="nav-inner">
+    <a class="nav-name" href="#top">Ahmed Zayeef</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#investigations">Investigations</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#honors">Honors</a>
+      <a href="#contact">Contact</a>
     </div>
-  </header><!-- End Header -->
+  </div>
+</nav>
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    
-  </section><!-- End Hero -->
+<main id="top">
 
-  <main id="main">
+  <header class="hero" id="about">
+    <p class="kicker">School of Journalism · Michigan State University</p>
+    <h1>Ahmed Zayeef</h1>
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
+    <p>Ahmed Zayeef is a PhD candidate in Information and Media in the School of Journalism at Michigan State University. He studies journalism as a negotiated practice, examining how journalists manage the conflicts, uncertainties, and ambiguities that emerge when professional ideals encounter institutional, political, and community pressures. His research lies at the intersection of journalism studies, media sociology, political communication, and media ethics.</p>
+    <p>His proposed dissertation, directed by Tim P. Vos, develops a theory of negotiation in journalism to explain how professional practice is shaped through journalists' judgments, interpersonal interactions, and encounters with institutional constraints. The project examines how these negotiations influence journalistic decisions and, ultimately, the news presented to the public. Across his broader research program, Zayeef investigates responses ranging from improvisation and boundary calibration to compromise, resistance, and silence.</p>
+    <p>A related strand of his scholarship examines journalism under political and institutional constraint. This work focuses on press freedom, state influence, professional autonomy, investigative practice, and journalistic nationalism, particularly in authoritarian and transitional media environments. Bangladesh is an important site of this research, but his work addresses broader questions about how journalists preserve professional authority, negotiate relationships with communities and institutions, and respond when normative commitments conflict with what political power permits.</p>
+    <p>These questions emerge from more than a decade of professional journalism experience. Before entering academia, Zayeef worked as a reporter in Dhaka, primarily at <em>Prothom Alo</em>, one of Bangladesh's leading national newspapers. His reporting covered national security, political violence, corruption, elections, terrorism, the judiciary, and law-enforcement accountability. The Global Investigative Journalism Network twice selected his reporting among the best investigative work from Bangladesh. He also received national recognition from Transparency International Bangladesh and the Crime Reporters Association of Bangladesh. Reporting within a politically restrictive media environment continues to inform his scholarly interest in the relationship among professional norms, journalistic judgment, and institutional power.</p>
+    <p>Zayeef's research has appeared in <em>Journalism Studies</em>. His published work includes a study with Tim P. Vos that extends the hierarchy of influences model by examining authoritarian influences on journalism and a study with Perry Parks analyzing cross-national news discourse, border violence, and the limits of journalistic nationalism. His ongoing projects examine journalists' professional embeddedness, the negotiation of roles and norms, and metajournalistic constructions of advocacy.</p>
+    <p>His scholarship has received a Top Faculty Paper Award from the Cultural and Critical Studies Division of the Association for Education in Journalism and Mass Communication, a Best Student Paper Award from AEJMC's Community Journalism Interest Group, and a Top Student Paper distinction from the International Communication Association's Mass Communication Division. He is also an AEJMC Mass Communication and Society Division Diversity and Inclusion Career Development Fellow. His international professional fellowships include the Chevening South Asia Journalism Programme at the University of Westminster and the U.S. Department of State's Edward R. Murrow Program for Journalists.</p>
+    <p>At Michigan State, Zayeef has taught News Reporting and Writing and Images and Messages as instructor of record. His teaching connects conceptual knowledge with professional practice, emphasizing evidence-based reporting, ethical judgment, critical media analysis, and journalism's public responsibilities. He draws on his newsroom experience to help students understand how reporting decisions are shaped not only by professional standards but also by institutional structures, relationships, and unequal distributions of power.</p>
+    <p>Zayeef serves as an ad hoc reviewer for <em>Journalism Studies</em> and as a conference reviewer for AEJMC. He has also represented graduate students through Michigan State University's University Council and Council of Graduate Students.</p>
+    <p>He holds an M.S. in Journalism and Media Communication from Colorado State University and bachelor's and master's degrees in Mass Communication and Journalism from the University of Dhaka.</p>
+  </header>
 
-        <style>
-          .about p{font-family: "Helvetica Neue",Arial,sans-serif;}
-        </style>
+  <section id="research">
+    <p class="eyebrow">Research</p>
+    <h2>Publications and presentations</h2>
 
-        <div class="row">
-          <!-- <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
-          </div> -->
-          <div class="col-lg-10 pt-4 pt-lg-0 content" data-aos="fade-left">
-
-            <div class="section-title">
-              <h2>About</h2>
-              <p>
-               Ahmed Zayeef is a journalist with experience in investigative and narrative reporting. From his sophomore years, he has covered many issues in his native Bangladesh, including human rights abuses, political violence, crime, militancy, judiciary, supreme court, international crimes tribunal set up to prosecute crimes against humanity, higher education, student politics, culture, and so on. While working for the Daily Prothom Alo, Bangladesh’s leading national daily, his investigative report proved the government's involvement in extrajudicial killings for the first time in 2019, which started decades ago. 
-              </p>
-            </div>
-
-            
-            <div class="row">
-              <div class="col-md-12">
-                <p>
-                  Zayeef covered the deadly militant attack in Dhaka's Holey Artisan Bakery that left 20 hostages killed on July 1, 2016. After the attack, he also covered the crackdown by law enforcement agencies against ‘militants’ across the country. One of his investigative stories on militancy uncovered law enforcement agencies' involvement in abducting a young man and demanding ransom through sources by intimidating his family with the threat of killing him in the ‘crossfire.’ International media picked up his breaking story on the arrest of Saifullah Ozaki, who would recruit members for ISIS from Bangladesh and send them to Syria. 
-                </p>
-                <p>
-                  Ahmed Zayeef reported extensively on the country’s education system during his undergrad years. His report exposed university professors' unethical practices in grading students, plagiarism in research articles, and financial corruption. He broke out gruesome stories of ruling party student politicians' torture of general students at the University of Dhaka and their control over the university administration. His investigative story on student politicians' influence on the recruitment of junior directors by National Security Intelligence was unprecedented. 
-                </p>                
-                <p>
-                Zayeef visited India as one of the participants in a youth leadership program organized by the Indian High Commission in Bangladesh. He attended the Global Investigative Journalist Conference 2019 in Hamburg, Germany as a GIJN fellow. He was one of the participants of the Edward R Murrow Research and Investigation Program for Journalists in 2020, organized by the US State Department. 
-                </p>
-              </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume d-none">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Resume</h2>
-        </div>
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up">
-            <div class="resume-item pb-0">
-              <h4>Ahmed Zayeef</h4>
-              <p><em>
-                •  More than 11 years of experience as a newspaper reporter. 
-                • Award winner for investigative reporting.
-                • Covered human rights abuses, political violence, crime, militancy, local government and national election, student politics, education, judiciary, culture, and money laundering-related issues. 
-                • Former Global Investigative Journalist Network (GIJN) Fellow.
-                • Former International Visitor Leadership Program (IVLP) Fellow. 
-                • Two of my investigative stories got listed by the GIJN in 2019 and 2020.
-                </em>
-              </p>
-              <ul>
-                <li>Fort Collins, CO</li>
-                <li>(970) 694-7036</li>
-                <li>zayeef.du@gmail.com</li>
-                <li>linkedin.com/in/ahmed-zayeef/</li>
-              </ul>
-            </div>
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Master of Science in Journalism</h4>
-              <h5> Expected May 2023 </h5>
-              <p><em>Colorado State University</em></p>
-              <p>Fort Collins, Colorado</p>
-            </div>
-            <div class="resume-item">
-              <h4>Master of Social Science </h4>
-              <h5>2013</h5>
-              <p><em>Concentration: Mass Communication and Journalism</em></p>
-              <p>University of Dhaka, Dhaka, Bangladesh</p>
-            </div>
-            <div class="resume-item">
-              <h4>Bachelor of Social Science </h4>
-              <h5>2012</h5>
-              <p><em>Concentration: Mass Communication and Journalism</em></p>
-              <p>University of Dhaka, Dhaka, Bangladesh</p>
-            </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">RELATED WORK EXPERIENCE</h3>
-            <div class="resume-item">
-              <h4> Graduated Teaching Assistant </h4>
-              <h5> August 2021 - Present </h5>
-              <p><em> Colorado State University, Fort Collins, Colorado </em></p>
-              <ul>
-                <li> Co-instructed into media and society course of 89 students, enhancing my communication and leadership skills. </li>
-                <li> Grading assignments is boosting my power of judgment and critical evaluation. </li>                
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4> Reporter, The Daily Prothom Alo </h4>
-              <h5> Mar 2016 – May 2021 </h5>
-              <p><em>Dhaka, Bangladesh </em></p>
-              <ul>
-                <li> Covered the areas of crime, corruption, and money laundering-related issues. </li>
-                <li> Wrote an investigative story where I proved the government’s involvement in an extrajudicial killing that for the first time. </li>
-                <li> Wrote an investigative report that revealed law enforcement agencies in plainclothes involved in abduction following ransom demand and torture to death.  </li>
-                <li>Wrote an investigative story that exposed govt—backed students’ politicians’ illegal admission to a public university.</li>
-                <li> Wrote an investigative story on how the victim’s family of extra-judicial killing has been denied justice by state apparatus.</li>
-                <li>Covered every militant attack and anti-militant operation since the 2016 Holy Artisan Bakery attack.</li>
-                <li> Exposed corruption of the state bank and government officials.</li>
-                <li> Captured pictures relevant to my story for the newspaper. </li>
-                <li> Made short videos for the newspaper website and social media pages while covering any significant issues. </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">RELATED WORK EXPERIENCE</h3>
-            <div class="resume-item">
-              <h4> Reporter, The Daily Dhaka Tribune (English Daily)  </h4>
-              <h5> Feb 2014 - Feb 2015  </h5>
-              <p><em> Dhaka, Bangladesh</em></p>
-              <ul>
-                <li> Covered judiciary including International Crimes Tribunal.</li>
-                <li> Exposed destruction of reserve forest by the law enforcement agency. </li>
-                <li> Wrote long-form stories, including the woe of a justice-denied family.</li>
-                <li> Wrote investigative stories on the corruption of student politicians.</li>
-                <li> Wrote in-depth stories on higher education.</li>                
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4> Dhaka University Correspondent, The Daily Prothom Alo </h4>
-              <h5> Feb 2010 – Jan 2014 </h5>
-              <p><em>Dhaka, Bangladesh </em></p>
-              <ul>
-                <li> Exposed influence in the recruitment of the National Security Agency by the govt.  </li>
-                <li> Exposed ethical misconduct of the university teachers in recruitment, research, and exam paper evaluation. </li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4> Dhaka University Correspondent, The Sangbad </h4>
-              <h5> Feb 2009 – Jan 2010 </h5>
-              <p><em>Dhaka, Bangladesh </em></p>
-              <ul>
-                <li> Wrote academic and related news stories, including politics and research. </li>
-                <li> Exposed the involvement of students with militancy.  </li>                
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title"> PROFESSIONAL RECOGNITIONS </h3>
-            <div class="resume-item">
-              <h4> Investigative Journalism Award  </h4>
-              <h5> 2021  </h5>
-              <p><em> Transparency International Bangladesh (TIB) </em></p>
-            </div>
-            <div class="resume-item">
-              <h4> Best Investigative Reporter Award  </h4>
-              <h5> 2019 </h5>
-              <p><em> Crime Reporters Association of Bangladesh </em></p>
-            </div>
-            <div class="resume-item">
-              <h4> Best Investigative Reporter Award </h4>
-              <h5> 2019 </h5>
-              <p><em>The Daily Prothom Alo</em></p>
-            </div>
-            <div class="resume-item">
-              <h4> Best Emerging Reporter  </h4>
-              <h5> 2018 </h5>
-              <p><em>The Daily Prothom Alo</em></p>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title"> LEADERSHIP & KNOWLEDGE SHARING </h3>
-            <div class="resume-item">
-              <h4> Global Investigative Journalism Network (GIJN) Fellowship </h4>
-              <h5> 2019  </h5>
-              <ul>
-                <li> The fellowship was to attend the annual international conference organized by the GIJN in Hamburg, Germany.</li>
-                <li> Met investigative reporters from around the world and shared experiences. </li>
-                <li> Get a strong network of journalists across the world.</li>                
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4> International Visitor Leadership Program (IVLP) Fellow.  </h4>
-              <h5> February 18 to March 6, 2020  </h5>
-              <p><em> U.S. State Dept.</em></p>
-              <p>Program title- Edward R. Murrow Program for Journalists- Research and Investigation. </p>
-              <ul>
-                <li> Visited media houses and related organizations in Washington DC, Boston, New Mexico and Florida.  </li>
-                <li> Met local, national, and international journalists and attended knowledge-sharing sessions in Journalism Institutes.</li>
-                <li> Attended a day-long session on fact-checking and disinformation in Poynter. </li>
-                <li> Get a strong network of young journalists from 24 countries. </li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4> Bangladesh Youth Delegation to Indi </h4>
-              <h5> March 24 to April 1, 2018 </h5>
-              <p><em>Indian Government, Youth exchange program </em></p>
-              <ul>
-                <li> Met Indian Prime Minister and visited some historical and cultural institutions across Delhi and Mumbai. </li>
-                <li> Get a strong network of 100 young, influential professionals in Bangladesh. </li>                
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4> Chevening South Asia Journalism Fellowship (SAJP) </h4>
-              <h5> University of Westminster</h5>
-              <p><em>I was selected for the fellowship titled ‘Good Governance in a Changing World: The Media, Politics, and Society,’ where Journalists from South Asian countries participated. But I could not participate in the program for CSU's ongoing master’s program. </em></p>              
-            </div>
-            <div class="resume-item">
-              <h4> Cross Border Collaboration </h4>
-              <p><em>Collaborated with Norwegian Investigative journalist Tarjei Leer-Salvesen on a series of stories on how fake Facebook IDs impacted a local election in Norway.</em></p>              
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title"> PROFESSIONAL MEMBERSHIP </h3>
-            <div class="resume-item">
-              <h4> Investigative Reporters and Editors </h4>
-              <h5> June 2022-11-09  </h5>
-              <p><em> Attended its 22nd annual conference held from June 23 to June 26 this year in Aurora, Denver.</em></p>
-            </div>
-            <div class="resume-item">
-              <h4> South Asian Journalists Association  </h4>
-              <h5> October 2022-11-09 </h5>
-              <p><em> Memberh </em></p>
-            </div>
-            <div class="resume-item">
-              <h4> Dhaka Reporters Unity (DRU) </h4>
-              <h5> 2017- Present </h5>
-              <p><em> Member </em></p>
-            </div>
-            <div class="resume-item">
-              <h4> Crime Reporters Association of Bangladesh (CRAB)  </h4>
-              <h5> 2017-Present </h5>
-              <p><em> Member </em></p>
-            </div>
-            <div class="resume-item">
-              <h4> Dhaka Union of Journalists (DUJ)  </h4>
-              <h5> 2017-Present </h5>
-              <p><em> Member </em></p>
-            </div>
-            <div class="resume-item">
-              <h4> Dhaka University Journalists Association (DUJA)   </h4>
-              <h5> May 2012 -May 2013 </h5>
-              <p><em> General Secretary </em></p>
-              <ul>
-                <li>Led 44 Dhaka University Correspondents. </li>
-                <li>Organized seminars, cultural programs, journalistic skill development workshops, excursions, and published magazines.</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4> LANGUAGE PROFICIENCY  </h4>
-              <p><em> Proficient in Bengali (mother tongue) and English in all four modes: including writing, reading, listening, and speaking.  </em></p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Resume Section -->
-
-    <!-- ======= Works Section ======= -->
-    <section id="Works" class="works section-bg">
-      <div class="container">
-        <style>.works .rounded{max-height:170px;}</style>
-
-        <div class="section-title">
-          <h2>Works</h2>
-          <p> </p>
-        </div>
-
-        <div class="row" data-aos="fade-up">
-          <div class="col-md-3">
-            <div class="text-center">
-              <a class="text-black" href="https://en.prothomalo.com/bangladesh/news/192064/Search-for-%E2%80%98Hercules%E2%80%99-leads-to-govt-vehicle" target="_blank">
-                <img src="//ahmedzayeef.com/assets/works/hercules.jpg" class="rounded w-100" alt="...">
-                <p class="mt-3">
-                  Search for ‘Hercules’ leads to govt vehicle
-                </p>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="text-center">
-              <a class="text-black" href="https://en.prothomalo.com/bangladesh/crime-and-law/the-killings-that-never-see-justice" target="_blank">
-                <img src="//ahmedzayeef.com/assets/works/killing-never-see-justice.jpg" class="rounded w-100" alt="killing-never-see-justice">
-                <p class="mt-3">
-                  The killing that never see justice
-                </p>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="text-center">
-              <a class="text-black" href="https://en.prothomalo.com/bangladesh/Militant-Saifullah-Ozaki-in-Iraqi-jail" target="_blank">
-                <img src="//ahmedzayeef.com/assets/works/saifullah-ozaki.jpg" class="rounded w-100" alt="saifullah-ozaki">
-                <p class="mt-3">
-                  Saifullah Ozaki is in Iraqi jail
-                </p>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="text-center">
-              <a class="text-black" href="https://en.prothomalo.com/bangladesh/news/127857/Family-pays-Tk-50-lac-in-fear-of-crossfire" target="_blank">
-                <img src="//ahmedzayeef.com/assets/works/abdus-samad.jpg" class="rounded w-100" alt="abdus-samad">
-                <p class="mt-3">
-                  British Bangladeshi missing for 4 months: Family pays Tk 5m in fear of 'crossfire'
-                </p>
-              </a>
-            </div>
-          </div>  
-        </div>
-
-        <div class="row mt-5" data-aos="fade-up">
-          <div class="col-md-3 d-none">
-            <div class="text-center">
-              <a class="text-black" href="https://en.prothomalo.com/bangladesh/news/132853/Missing-youths-bring-new-worries" target="_blank">
-                <img src="//ahmedzayeef.com/assets/works/missing-youth.jpg" class="rounded w-100" alt="missing-youth">
-                <p class="mt-3">
-                  Missing youths bring new worries
-                </p>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-3 d-none">
-            <div class="text-center">
-              <a class="text-black" href="https://en.prothomalo.com/bangladesh/news/166714/Abduction-continues-nearly-400-disappear-in-9-yrs" target="_blank">
-                <img src="//ahmedzayeef.com/assets/works/disappear.jpg" class="rounded w-100" alt="disappear">
-                <p class="mt-3">
-                   Nearly 400 disappear in 9 yrs
-                </p>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="text-center">
-              <a class="text-black" href="https://en.prothomalo.com/bangladesh/news/171206/9-yr-old-killed-by-police-vehicle" target="_blank">
-                <img src="//ahmedzayeef.com/assets/works/9-yr-killed-police-vehicle.jpg" class="rounded w-100" alt="9-yr-killed-police-vehicle">
-                <p class="mt-3">
-                  9-yr-old killed by police vehicle
-                </p>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="text-center">
-              <a class="text-black" href="https://en.prothomalo.com/bangladesh/news/175500/Youth-dies-after-DB-quizzing" target="_blank">
-                <img src="//ahmedzayeef.com/assets/works/ashraf-ali.jpg" class="rounded w-100" alt="ashraf-ali">
-                <p class="mt-3">
-                  Youth dies after police quizzing
-                </p>
-              </a>
-            </div>
-          </div>  
-          <div class="col-md-3">
-            <div class="text-center">
-              <a class="text-black" href="https://en.prothomalo.com/bangladesh/news/201543/8-DUCSU-leaders-studentship-in-question" target="_blank">
-                <img src="//ahmedzayeef.com/assets/works/dhaka-university.jpg" class="rounded w-100" alt="dhaka-university.jpg">
-                <p class="mt-3">
-                  8 DUCSU leaders' studentship in question
-                </p>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="text-center">
-              <a class="text-black" href="https://www.dhakatribune.com/uncategorized/2014/03/12/rab-grabs-parts-of-reserve-forest-2" target="_blank">
-                <img src="//ahmedzayeef.com/assets/works/rab-grab-forest.jpg" class="rounded w-100" alt="rab-grab-forest">
-                <p class="mt-3">
-                  RAB ‘grabs’ parts of reserve forest
-                </p>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="row mt-5" data-aos="fade-up">
-
-          <div class="col-md-12">
-            <div class="row">
-              
-              <div class="col-md-3">
-                <div class="text-center">
-                  <a class="text-black" href="https://www.dhakatribune.com/uncategorized/2015/01/17/justice-elusive-for-murder-cover-up-victims-family" target="_blank">
-                    <img src="//ahmedzayeef.com/assets/works/justice-elusive.jpg" class="rounded w-100" alt="justice-elusive-">
-                    <p class="mt-3">
-                      Justice elusive for murder cover-up victim’s family
-                    </p>
-                  </a>
-                </div>
-              </div> 
-              <div class="col-md-3">
-                <div class="text-center">
-                  <a class="text-black" href="//ahmedzayeef.com/bcl-shohag.html">
-                    <img src="//ahmedzayeef.com/assets/works/bsl-shohag.jpg" class="rounded w-100" alt="dhaka-university.jpg">
-                    <p class="mt-3">
-                      Presidential perks
-                    </p>
-                  </a>
-                </div>
-              </div>
-              
-              <div class="col-md-3">
-                <div class="text-center">
-                  <a class="text-black" href="//ahmedzayeef.com/general-good.html">
-                    <img src="//ahmedzayeef.com/assets/works/nazmul.jpg" class="rounded w-100" alt="justice-elusive-">
-                    <p class="mt-3">
-                      General good fortune 
-                    </p>
-                  </a>
-                </div>
-              </div> 
-              <div class="col-md-3">
-                <div class="text-center">
-                  <a class="text-black" href="//ahmedzayeef.com/veep-stakes.html">
-                    <img src="//ahmedzayeef.com/assets/works/veeps.jpg" class="rounded w-100" alt="rab-grab-forest">
-                    <p class="mt-3">
-                       The veep stakes
-                    </p>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>           
-        </div>
-      </div>
-    </section><!-- End Works Section -->
-
-    <!-- ======= Works Section ======= -->
-    <section id="awards" class="awards section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Awards</h2>
-        </div>
-        <div class="row" data-aos="fade-up">
-          <div class="col-lg-12">
-            <p class="" style="white-space:pre-wrap;line-height:1.8em;"> <strong>Investigative Journalism Awards 2021<br></strong> • from Transparency International <br> <em>“</em> <u><a style="color:#111;" href="#"><em> For the investigative story on how the extrajudicial killing victims family are being denied justice after they accused law enforcement agency for the killing. </em></a> </u><em>”</em>
-            </p>
-            <p class="" style="white-space:pre-wrap;line-height:1.8em;"> <strong>Best Investigative Reporter Award  2019<br></strong> • from Crime Reporters Association of Bangladesh (CRAB) <br> <em>“</em> <u><a style="color:#111;" href="#"><em> For the investigative story on proving law enforcement agency’s involvement to an extra judicial killing incident that killed two young boys and left a note with the body, claiming it was done by “Herculis”. </em></a> </u><em>”</em>
-            </p>
-            <p class="" style="white-space:pre-wrap;line-height:1.8em;"> <strong> Award for the Best Discussed Report of the year, 2019 <br></strong> • From Prothom Alo <br> <em>“</em> <u><a style="color:#111;" href="#"><em> For the investigative story on “Herculis”. </em></a> </u><em>”</em>
-            </p>
-            <p class="" style="white-space:pre-wrap;line-height:1.8em;"> <strong> Best Emerging Reporter, 2018 <br></strong> • From Prothom Alo <br> <em>“</em> <u><a style="color:#111;" href="#"><em> For several investigative stories throughout the year on militancy, crime and education. </em></a> </u><em>”</em>
-            </p>
-            <p class="" style="white-space:pre-wrap;line-height:1.8em;"> <strong> Best Reporter Of The Month <br></strong> • From Prothom Alo <br> <em>“</em> <u><a style="color:#111;" href="#"><em> Four times in 2017 and 2018 for several investigative reports. </em></a> </u><em>”</em>
-            </p>
-            <p class="" style="white-space:pre-wrap;line-height:1.8em;"> <strong> Best Investigative Reports Coming Out Of Bangladesh <br></strong> • From The Global Investigative Journalist Network (GIJN) <br> <em>“</em> <u><a style="color:#111;" href="#"><em> GIJN selected two of my stories as one of the best investigative reports coming out of Bangladesh in 2019 and 2020. </em></a> </u><em>”</em>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Works Section -->
-
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p></p>
-        </div>
-
-        <div class="row" data-aos="fade-in">
-
-          <div class="col-lg-8 mx-auto">
-            <div class="info row">
-
-              <div class="email col-lg-12">
-                <i class="bi bi-envelope"></i>
-                <p> Got any thoughts, pitches or want to say hello? Please reach out via email: <a href="mailto:zayeef.du@gmail.com" target="_blank">zayeef.du@gmail.com</a></p>
-              </div>
-
-              <div class="phone col-lg-12">
-                <i class="bi bi-phone"></i>
-                <p> For more secure communications, please contact me via Signal: <a href="tel:+19706947036"> +1 (970) 694-7036 </a> </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span> Ahmed Zayeef </span></strong>
-      </div>
+    <div class="citations">
+      <h3>Published</h3>
+      <p><strong>Zayeef, A.</strong>, &amp; Parks, P. (2026). Naturalizing violence: Media discourse and the limits of journalistic nationalism. <em>Journalism Studies</em>, 1–20. <a href="https://doi.org/10.1080/1461670X.2026.2695130">doi:10.1080/1461670X.2026.2695130</a></p>
+      <p><strong>Zayeef, A.</strong>, &amp; Vos, T. P. (2025). Authoritarian influences: Interactivity within the hierarchy of influences model. <em>Journalism Studies</em>, 1–21. <a href="https://doi.org/10.1080/1461670x.2025.2601234">doi:10.1080/1461670x.2025.2601234</a></p>
     </div>
-  </footer><!-- End  Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <div class="citations">
+      <h3>Forthcoming and under review</h3>
+      <p><strong>Zayeef, A.</strong>, &amp; Vos, T. P. Proximity and principle: Role and norm negotiation based on embeddedness of journalists. <em>Journalism Practice</em>. <span class="cite-sep">·</span> <span class="cite-status">Accepted</span></p>
+      <p>Parks, P., <strong>Zayeef, A.</strong>, Pettengill, J., &amp; Brown, K. D. "We're journalists, not advocates": Advocacy and strategic ambiguity in U.S. metajournalistic discourse. <em>Journal of Media Ethics</em>. <span class="cite-sep">·</span> <span class="cite-status">Revise &amp; resubmit</span></p>
+    </div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+    <div class="citations">
+      <h3>Conference presentations</h3>
+      <p><strong>Zayeef, A.</strong>, &amp; Vos, T. P. (2026). The demystification mandate: Role, boundary, and embeddedness in the metajournalistic discourse of foreign correspondents in the United States. International Communication Division, AEJMC Annual Conference, New Orleans, LA.</p>
+      <p>Parks, P., Pettengill, J., <strong>Zayeef, A.</strong>, &amp; Brown, K. D. (2026). "We're journalists, not advocates": Advocacy and strategic ambiguity in U.S. metajournalistic discourse. Cultural and Critical Studies Division, AEJMC Annual Conference, New Orleans, LA.</p>
+      <p><strong>Zayeef, A.</strong>, &amp; Vos, T. P. (2025). Proximity and principle: Role and norm negotiation among embedded journalists. Community Journalism Interest Group, AEJMC Annual Conference, San Francisco, CA.</p>
+      <p>Marple, C., Kim, M., Wang, Y., Delle, F., <strong>Zayeef, A.</strong>, &amp; Rhodes, N. (2025). Communication of story world norms in <em>The Devil Wears Prada</em>: A qualitative exploration. Mass Communication Division, ICA Annual Conference, Denver, CO.</p>
+      <p><strong>Zayeef, A.</strong>, &amp; Wolfgang, D. (2023). "Symbol of pride": Subjugation of journalism under power. IAMCR Annual Conference, Lyon, France.</p>
+      <p><strong>Zayeef, A.</strong>, &amp; Wolfgang, D. (2023). Propaganda of press freedom. Political Communication Division, AEJMC Midwinter Conference, Norman, OK.</p>
+      <p><strong>Zayeef, A.</strong> (2023). Maneuvering the DSA: Bangladeshi digital activists' ways of expression on Facebook. World Social Science Association Conference, Tempe, AZ.</p>
+      <p><strong>Zayeef, A.</strong>, &amp; Kodrich, K. (2023). Used and underpaid: A PEC analysis of the journalism profession in Bangladesh. World Social Science Association Conference, Tempe, AZ.</p>
+    </div>
+  </section>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <section id="investigations">
+    <p class="eyebrow">Selected Investigations</p>
+    <h2>A decade of reporting in Bangladesh</h2>
+    <p>A selection from more than ten years of investigative reporting, most of it for <em>The Daily Prothom Alo</em>. Where an English edition was published, it is linked.</p>
+
+    <p class="beat">Extrajudicial killing and enforced disappearance</p>
+
+    <article class="story">
+      <p class="dateline"><b>Dhaka</b> · 2019 · The Daily Prothom Alo</p>
+      <h3><a href="https://en.prothomalo.com/bangladesh/news/192064/Search-for-%E2%80%98Hercules%E2%80%99-leads-to-govt-vehicle">Search for 'Hercules' leads to govt vehicle</a></h3>
+      <p>An investigation that traced a government vehicle to a staged "crossfire" death and established official involvement in a pattern of extrajudicial killings. Named Best Investigative Reporter by the Crime Reporters Association of Bangladesh and listed by the Global Investigative Journalism Network among the year's best investigative reports from Bangladesh.</p>
+    </article>
+
+    <article class="story">
+      <p class="dateline"><b>Dhaka</b> · 2022 · The Daily Prothom Alo</p>
+      <h3><a href="https://en.prothomalo.com/bangladesh/crime-and-law/the-killings-that-never-see-justice">The killings that never see justice</a></h3>
+      <p>How the families of extrajudicial-killing victims were turned away by the state after they named a law enforcement agency. Awarded the Transparency International Bangladesh Investigative Journalism Award in 2021.</p>
+    </article>
+
+    <article class="story">
+      <p class="dateline"><b>Dhaka</b> · 2017 · The Daily Prothom Alo</p>
+      <h3><a href="https://en.prothomalo.com/bangladesh/news/166714/Abduction-continues-nearly-400-disappear-in-9-yrs">Nearly 400 disappear in nine years</a></h3>
+      <p>A count of the disappeared across nine years that gathered the scale of enforced disappearance from scattered cases into a single record.</p>
+    </article>
+
+    <article class="story">
+      <p class="dateline"><b>Dhaka</b> · 2016 · The Daily Prothom Alo</p>
+      <h3><a href="https://en.prothomalo.com/bangladesh/news/132853/Missing-youths-bring-new-worries">Missing youths bring new worries</a></h3>
+      <p>Reporting on a pattern of young men who went missing, and the fear of enforced disappearance that spread with it.</p>
+    </article>
+
+    <article class="story">
+      <p class="dateline"><b>Dhaka</b> · 2016 · The Daily Prothom Alo</p>
+      <h3><a href="https://en.prothomalo.com/bangladesh/news/127857/Family-pays-Tk-50-lac-in-fear-of-crossfire">British Bangladeshi missing for four months: family pays ransom in fear of 'crossfire'</a></h3>
+      <p>A British-Bangladeshi man vanished for four months while his family paid ransom under the threat that he would otherwise be killed in "crossfire." The story documented abduction for ransom by officers in plainclothes.</p>
+    </article>
+
+    <article class="story">
+      <p class="dateline"><b>Dhaka</b> · 2018 · The Daily Prothom Alo</p>
+      <h3><a href="https://en.prothomalo.com/bangladesh/news/175500/Youth-dies-after-DB-quizzing">Youth dies after DB quizzing</a></h3>
+      <p>A young man's death after interrogation by the Detective Branch, and the questions of accountability it raised.</p>
+    </article>
+
+    <article class="story">
+      <p class="dateline"><b>Dhaka</b> · 2018 · The Daily Prothom Alo</p>
+      <h3><a href="https://en.prothomalo.com/bangladesh/news/171206/9-yr-old-killed-by-police-vehicle">9-yr-old killed by police vehicle</a></h3>
+      <p>The death of a nine-year-old struck by a police vehicle, and the accountability that followed.</p>
+    </article>
+
+    <article class="story">
+      <p class="dateline"><b>Dhaka</b> · 2015 · Dhaka Tribune</p>
+      <h3><a href="https://www.dhakatribune.com/uncategorized/2015/01/17/justice-elusive-for-murder-cover-up-victims-family">Justice elusive for murder cover-up victim's family</a></h3>
+      <p>A long-form account of a family left without justice after a murder was covered up.</p>
+    </article>
+
+    <p class="beat">Militancy and the security forces</p>
+
+    <article class="story">
+      <p class="dateline"><b>Dhaka</b> · 2019 · The Daily Prothom Alo</p>
+      <h3><a href="https://en.prothomalo.com/bangladesh/Militant-Saifullah-Ozaki-in-Iraqi-jail">Saifullah Ozaki is in Iraqi jail</a></h3>
+      <p>The first report of the arrest of Saifullah Ozaki, an academic who recruited Bangladeshis for ISIS and routed them to Syria. International outlets followed the story.</p>
+    </article>
+
+    <article class="story">
+      <p class="dateline"><b>Dhaka</b> · 2014 · Dhaka Tribune</p>
+      <h3><a href="https://www.dhakatribune.com/uncategorized/2014/03/12/rab-grabs-parts-of-reserve-forest-2">RAB 'grabs' parts of reserve forest</a></h3>
+      <p>A report that documented the paramilitary Rapid Action Battalion's encroachment on protected reserve forest.</p>
+    </article>
+
+    <p class="beat">Universities and student politics</p>
+
+    <article class="story">
+      <p class="dateline"><b>Dhaka</b> · 2019 · The Daily Prothom Alo</p>
+      <h3><a href="https://en.prothomalo.com/bangladesh/news/201543/8-DUCSU-leaders-studentship-in-question">8 DUCSU leaders' studentship in question</a></h3>
+      <p>An investigation into how ruling-party student leaders secured university standing through irregular admissions.</p>
+    </article>
+
+    <article class="story">
+      <p class="dateline"><b>Dhaka</b> · 2014 · Dhaka Tribune</p>
+      <h3><a href="https://www.dhakatribune.com/bangladesh/bangladesh-others/80640/presidential-perks">Presidential perks</a></h3>
+      <p>An unexplained-wealth investigation into the president of the Chhatra League, the ruling Awami League's student front, who acquired a microbus, a luxury flat, land, and a palatial village home soon after taking office, despite a prior income of a modest NGO salary.</p>
+    </article>
+
+    <article class="story">
+      <p class="dateline"><b>Dhaka</b> · 2014 · Dhaka Tribune</p>
+      <h3><a href="https://www.dhakatribune.com/bangladesh/bangladesh-others/80778/general-good-fortune">General good fortune</a></h3>
+      <p>A companion investigation into the Chhatra League's general secretary, whose new assets included Dhaka flats, a stake in a news portal, phone and motorbike dealerships secured through political influence, government land in a reserved quota, and firearm licenses granted to a "special person of the state."</p>
+    </article>
+
+    <article class="story">
+      <p class="dateline"><b>Dhaka</b> · 2014 · Dhaka Tribune</p>
+      <h3><a href="https://www.dhakatribune.com/bangladesh/politics/80931/the-veep-stakes">The veep stakes</a></h3>
+      <p>A wider look at the Chhatra League's vice-presidents and their overnight fortunes, from a former footpath shoe vendor who became a flat owner to a brick-kiln operator accused of grabbing land.</p>
+    </article>
+  </section>
+
+  <section id="teaching">
+    <p class="eyebrow">Teaching</p>
+    <h2>Courses</h2>
+    <p class="beat">Instructor of record</p>
+
+    <article class="story">
+      <p class="dateline"><b>JRN 200</b> · Michigan State University · 2024–present</p>
+      <h3>News Reporting and Writing</h3>
+      <p>An introduction to reporting and writing: news judgment, information gathering, interviewing, and ethics. Students develop independent sources in a lab setting and write news across platforms in AP style. He redesigned the syllabus and developed the lectures, assignments, and rubrics.</p>
+    </article>
+
+    <article class="story">
+      <p class="dateline"><b>JRN 345</b> · Michigan State University · Summer 2026</p>
+      <h3>Images and Messages</h3>
+      <p>An analytical, historical, and critical study of visual communication. The course examines the role and effects of imagery in news and documentary work, the ethics of visual messages, the impact of technology on visual journalism, and the aesthetics and cultural belief systems tied to the medium of photography. He built this asynchronous summer course in full, including the video lectures, assignments, and rubrics.</p>
+    </article>
+
+    <p class="beat">Graduate teaching assistant</p>
+
+    <article class="story">
+      <p class="dateline"><b>JRN 108</b> · Michigan State University · 2023–2024</p>
+      <h3>The World of Media</h3>
+      <p>An introduction to the journalism and media industries, from established to emerging forms, with attention to content and audiences, policy and management, the history and structure of the field, media's reciprocal influence with society, and careers, law, ethics, media literacy, and diversity. He facilitated class discussion in a 350-student course, with weekly grading and assessment.</p>
+    </article>
+
+    <article class="story">
+      <p class="dateline"><b>JTC 100</b> · Colorado State University · 2021–2023</p>
+      <h3>Media in Society</h3>
+      <p>An introduction to the historical, economic, and cultural impact of mass media. He facilitated class discussion in sections of more than 250 students, with weekly grading and assessment.</p>
+    </article>
+  </section>
+
+  <section id="honors">
+    <p class="eyebrow">Awards &amp; Honors</p>
+    <h2>Academic and professional recognition</h2>
+
+    <div class="citations">
+      <h3>Academic awards</h3>
+      <p>Top Paper Award (Faculty, 3rd Place), Cultural and Critical Studies Division, AEJMC, for "We're Journalists, Not Advocates" <span class="cite-sep">·</span> <span class="cite-status">2026</span></p>
+      <p>Best Student Paper Award, Community Journalism Interest Group, AEJMC, for "Proximity and Principle" <span class="cite-sep">·</span> <span class="cite-status">2025</span></p>
+      <p>Top Student Paper, Runner-Up, Mass Communication Division, ICA, for "Communication of Story World Norms in <em>The Devil Wears Prada</em>" <span class="cite-sep">·</span> <span class="cite-status">2025</span></p>
+      <p>Certificate of Academic Excellence, National Residence Hall Honorary, Colorado State University <span class="cite-sep">·</span> <span class="cite-status">2022</span></p>
+    </div>
+
+    <div class="citations">
+      <h3>Fellowships and scholarships</h3>
+      <p>AEJMC Mass Communication and Society Division Diversity and Inclusion Career Development Fellow <span class="cite-sep">·</span> <span class="cite-status">$1,200 (2026–2027)</span></p>
+      <p>Dr. Delia Koo Global Student Scholarship, Michigan State University <span class="cite-sep">·</span> <span class="cite-status">$2,000 (2026)</span></p>
+      <p>Ellen L. and Clyde L. Burton Endowed Scholarship in Journalism, Michigan State University <span class="cite-sep">·</span> <span class="cite-status">$3,200 (2026), $1,500 (2025), $1,470 (2024)</span></p>
+      <p>College of Communication Arts &amp; Sciences Endowed Scholarship, Michigan State University <span class="cite-sep">·</span> <span class="cite-status">$1,000 (2026), $1,000 (2025)</span></p>
+      <p>Thorson Doctoral Research Fellowship, Michigan State University <span class="cite-sep">·</span> <span class="cite-status">$2,000 (2025)</span></p>
+      <p>Rasmussen Fellowship, Michigan State University <span class="cite-sep">·</span> <span class="cite-status">$5,000 (2024)</span></p>
+      <p>ComArtSci General Scholarship, Michigan State University <span class="cite-sep">·</span> <span class="cite-status">$1,000 (2024)</span></p>
+    </div>
+
+    <div class="citations">
+      <h3>Grants</h3>
+      <p>Professional Development Fund Award, Department of Journalism and Media Communication, Colorado State University, for travel to the Investigative Reporters and Editors Annual Conference <span class="cite-sep">·</span> <span class="cite-status">$1,375 (2022)</span></p>
+    </div>
+
+    <div class="citations">
+      <h3>Journalism awards</h3>
+      <p>Best Investigative Report from Bangladesh, Global Investigative Journalism Network <span class="cite-sep">·</span> <span class="cite-status">2019, 2020</span></p>
+      <p>Investigative Journalism Award, Transparency International Bangladesh <span class="cite-sep">·</span> <span class="cite-status">2021</span></p>
+      <p>Best Investigative Reporter Award, Crime Reporters Association of Bangladesh <span class="cite-sep">·</span> <span class="cite-status">2019</span></p>
+      <p>Best Investigative Reporter Award, The Daily Prothom Alo <span class="cite-sep">·</span> <span class="cite-status">2019</span></p>
+      <p>Best Emerging Reporter Award, The Daily Prothom Alo <span class="cite-sep">·</span> <span class="cite-status">2018</span></p>
+    </div>
+
+    <div class="citations">
+      <h3>Journalism fellowships</h3>
+      <p>Chevening South Asia Journalism Programme Fellow, University of Westminster, awarded by the UK Foreign, Commonwealth &amp; Development Office <span class="cite-sep">·</span> <span class="cite-status">2021</span></p>
+      <p>Edward R. Murrow Program for Journalists (IVLP), U.S. Department of State <span class="cite-sep">·</span> <span class="cite-status">2020</span></p>
+      <p>Global Investigative Journalism Network Fellow <span class="cite-sep">·</span> <span class="cite-status">2019</span></p>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact">
+  <div class="foot-inner">
+    <div class="foot-links">
+      <a href="mailto:muham134@msu.edu">Email</a>
+      <a href="https://scholar.google.com/citations?hl=en&user=uweDv-sAAAAJ">Google Scholar</a>
+      <a href="https://www.linkedin.com/in/azayeef/">LinkedIn</a>
+      <a href="Zayeef_CV.pdf">Download CV (PDF)</a>
+    </div>
+    <p class="foot-note">CV updated July 2026 · © 2026 Ahmed Zayeef</p>
+  </div>
+</footer>
 
 </body>
-
 </html>

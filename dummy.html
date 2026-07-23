@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmed Zayeef — Journalism Scholar</title>
+<meta name="description" content="Ahmed Zayeef is a PhD candidate in the School of Journalism at Michigan State University. He studies journalism as a negotiated practice.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F8F7F3;
+    --ink:#20262D;
+    --ink-soft:#59616C;
+    --rule:#DBD8CF;
+    --red:#9E2B25;   /* editor's pencil */
+    --measure:66ch;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Source Serif 4",Georgia,serif;
+    font-size:1.06rem;
+    line-height:1.72;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--red);color:var(--paper);}
+
+  /* ---------- nav ---------- */
+  nav{
+    position:sticky;top:0;z-index:10;
+    background:color-mix(in srgb, var(--paper) 92%, transparent);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--rule);
+  }
+  .nav-inner{
+    max-width:52rem;margin:0 auto;padding:0.8rem 1.5rem;
+    display:flex;align-items:baseline;justify-content:space-between;gap:1rem;flex-wrap:wrap;
+  }
+  .nav-name{
+    font-family:"Besley",serif;font-weight:700;font-size:1rem;
+    letter-spacing:.01em;color:var(--ink);text-decoration:none;
+  }
+  .nav-links{display:flex;gap:1.35rem;flex-wrap:wrap;}
+  .nav-links a{
+    font-family:"IBM Plex Mono",monospace;font-size:.72rem;
+    letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink-soft);text-decoration:none;
+    padding-bottom:2px;border-bottom:1px solid transparent;
+  }
+  .nav-links a:hover,.nav-links a:focus-visible{color:var(--red);border-bottom-color:var(--red);}
+  a:focus-visible{outline:2px solid var(--red);outline-offset:3px;}
+
+  main{max-width:60rem;margin:0 auto;padding:0 1.5rem;}
+
+  /* ---------- hero / about ---------- */
+  header.hero{padding:5rem 0 1rem;}
+  .kicker{
+    font-family:"IBM Plex Mono",monospace;font-size:.74rem;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--red);
+    margin-bottom:1.1rem;
+  }
+  h1{
+    font-family:"Besley",serif;font-weight:700;
+    font-size:clamp(2.4rem,6vw,3.6rem);
+    line-height:1.08;letter-spacing:-0.012em;
+    margin-bottom:1.4rem;
+  }
+  .thesis{
+    font-family:"Besley",serif;font-style:italic;font-weight:400;
+    font-size:clamp(1.15rem,2.6vw,1.45rem);line-height:1.5;
+    color:var(--ink-soft);max-width:36ch;
+    border-left:3px solid var(--red);padding-left:1.1rem;
+    margin-bottom:2.5rem;
+  }
+  .portrait{
+    float:right;width:170px;aspect-ratio:4/5;margin:0 0 1rem 1.75rem;
+    border:1px solid var(--rule);background:#EDEBE4;
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    font-family:"IBM Plex Mono",monospace;font-size:.68rem;color:var(--ink-soft);
+    letter-spacing:.08em;padding:.75rem;
+  }
+  @media (max-width:560px){.portrait{float:none;margin:0 0 1.5rem;}}
+
+  /* ---------- sections ---------- */
+  section{padding:3.2rem 0;border-top:1px solid var(--rule);}
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace;font-size:.74rem;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--red);
+    margin-bottom:1.6rem;
+  }
+  h2{
+    font-family:"Besley",serif;font-weight:600;
+    font-size:1.55rem;line-height:1.25;margin-bottom:1.2rem;letter-spacing:-.005em;
+  }
+  p{margin-bottom:1.15rem;}
+  p:last-child{margin-bottom:0;}
+  em{font-style:italic;}
+  a{color:var(--red);text-decoration:none;border-bottom:1px solid color-mix(in srgb, var(--red) 35%, transparent);}
+  a:hover{border-bottom-color:var(--red);}
+
+  .citations{
+    margin-top:1.8rem;padding-top:1.4rem;border-top:1px dashed var(--rule);
+  }
+  .citations h3{
+    font-family:"IBM Plex Mono",monospace;font-size:.72rem;font-weight:500;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);
+    margin-bottom:.9rem;
+  }
+  .citations p{
+    font-size:.9rem;line-height:1.6;color:var(--ink-soft);
+    max-width:var(--measure);margin-bottom:.8rem;
+    padding-left:1.4rem;text-indent:-1.4rem; /* hanging indent, APA-style */
+  }
+  .citations + .citations{margin-top:2rem;}
+  .citations p strong{font-weight:600;color:var(--ink);}
+  .cite-award{
+    font-family:"IBM Plex Mono",monospace;font-size:.66rem;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--red);white-space:nowrap;
+  }
+  .cite-status{
+    font-family:"IBM Plex Mono",monospace;font-size:.66rem;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap;
+  }
+  .cite-sep{color:var(--rule);}
+
+  /* ---------- investigations ---------- */
+  .story{max-width:var(--measure);margin-bottom:2.4rem;}
+  .story:last-of-type{margin-bottom:0;}
+  .beat{
+    font-family:"IBM Plex Mono",monospace;font-size:.72rem;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--ink);
+    margin:2.6rem 0 1.5rem;padding-bottom:.55rem;border-bottom:1px solid var(--rule);
+  }
+  .dateline{
+    font-family:"IBM Plex Mono",monospace;font-size:.74rem;font-weight:500;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);
+    margin-bottom:.35rem;
+  }
+  .dateline b{color:var(--red);font-weight:500;}
+  .story h3{
+    font-family:"Besley",serif;font-weight:600;font-size:1.18rem;
+    line-height:1.35;margin-bottom:.45rem;
+  }
+  .story h3 a{color:var(--ink);border-bottom:1px solid var(--rule);}
+  .story h3 a:hover{color:var(--red);border-bottom-color:var(--red);}
+  .story p{font-size:.98rem;margin-bottom:0;}
+  .placeholder{
+    background:#EFEDE6;border:1px dashed var(--rule);
+    padding:1.1rem 1.3rem;font-family:"IBM Plex Mono",monospace;
+    font-size:.78rem;line-height:1.65;color:var(--ink-soft);max-width:var(--measure);
+  }
+
+  /* ---------- footer ---------- */
+  footer{
+    border-top:1px solid var(--rule);margin-top:3rem;
+    padding:2.6rem 1.5rem 3.4rem;
+  }
+  .foot-inner{max-width:52rem;margin:0 auto;}
+  .foot-links{
+    display:flex;gap:1.6rem;flex-wrap:wrap;margin-bottom:1.1rem;
+  }
+  .foot-links a{
+    font-family:"IBM Plex Mono",monospace;font-size:.76rem;
+    letter-spacing:.12em;text-transform:uppercase;
+  }
+  .foot-note{
+    font-family:"IBM Plex Mono",monospace;font-size:.7rem;
+    color:var(--ink-soft);letter-spacing:.06em;
+  }
+  @media (max-width: 600px) {
+    main{max-width:52rem;}
+    p{max-width:var(--measure);}
+  }
+</style>
+</head>
+<body>
+
+<nav aria-label="Site">
+  <div class="nav-inner">
+    <a class="nav-name" href="#top">Ahmed Zayeef</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#investigations">Investigations</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#honors">Honors</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+
+  <header class="hero" id="about">
+    <div class="profile_pic" style="display: flex;margin:0 0 20px;width: fit-content;">
+      <img draggable="false" src="picture.png" alt="Ahmed Zayeef" title="Ahmed Zayeef" height="200" width="200">
+    </div>
+    <p class="kicker">School of Journalism · Michigan State University</p>
+    <h1>Ahmed Zayeef</h1>
+
+    <p>Ahmed Zayeef is a PhD candidate in Information and Media in the School of Journalism at Michigan State University. He studies journalism as a negotiated practice, examining how journalists manage the conflicts, uncertainties, and ambiguities that emerge when professional ideals encounter institutional, political, and community pressures. His research lies at the intersection of journalism studies, media sociology, political communication, and media ethics.</p>
+    <p>His proposed dissertation, directed by Tim P. Vos, develops a theory of negotiation in journalism to explain how professional practice is shaped through journalists' judgments, interpersonal interactions, and encounters with institutional constraints. The project examines how these negotiations influence journalistic decisions and, ultimately, the news presented to the public. Across his broader research program, Zayeef investigates responses ranging from improvisation and boundary calibration to compromise, resistance, and silence.</p>
+    <p>A related strand of his scholarship examines journalism under political and institutional constraint. This work focuses on press freedom, state influence, professional autonomy, investigative practice, and journalistic nationalism, particularly in authoritarian and transitional media environments. Bangladesh is an important site of this research, but his work addresses broader questions about how journalists preserve professional authority, negotiate relationships with communities and institutions, and respond when normative commitments conflict with what political power permits.</p>
+    <p>These questions emerge from more than a decade of professional journalism experience. Before entering academia, Zayeef worked as a reporter in Dhaka, primarily at <em>Prothom Alo</em>, one of Bangladesh's leading national newspapers. His reporting covered national security, political violence, corruption, elections, terrorism, the judiciary, and law-enforcement accountability. The Global Investigative Journalism Network twice selected his reporting among the best investigative work from Bangladesh. He also received national recognition from Transparency International Bangladesh and the Crime Reporters Association of Bangladesh. Reporting within a politically restrictive media environment continues to inform his scholarly interest in the relationship among professional norms, journalistic judgment, and institutional power.</p>
+    <p>Zayeef's research has appeared in <em>Journalism Studies</em>. His published work includes a study with Tim P. Vos that extends the hierarchy of influences model by examining authoritarian influences on journalism and a study with Perry Parks analyzing cross-national news discourse, border violence, and the limits of journalistic nationalism. His ongoing projects examine journalists' professional embeddedness, the negotiation of roles and norms, and metajournalistic constructions of advocacy.</p>
+    <p>His scholarship has received a Top Faculty Paper Award from the Cultural and Critical Studies Division of the Association for Education in Journalism and Mass Communication, a Best Student Paper Award from AEJMC's Community Journalism Interest Group, and a Top Student Paper distinction from the International Communication Association's Mass Communication Division. He is also an AEJMC Mass Communication and Society Division Diversity and Inclusion Career Development Fellow. His international professional fellowships include the Chevening South Asia Journalism Programme at the University of Westminster and the U.S. Department of State's Edward R. Murrow Program for Journalists.</p>
+    <p>At Michigan State, Zayeef has taught News Reporting and Writing and Images and Messages as instructor of record. His teaching connects conceptual knowledge with professional practice, emphasizing evidence-based reporting, ethical judgment, critical media analysis, and journalism's public responsibilities. He draws on his newsroom experience to help students understand how reporting decisions are shaped not only by professional standards but also by institutional structures, relationships, and unequal distributions of power.</p>
+    <p>Zayeef serves as an ad hoc reviewer for <em>Journalism Studies</em> and as a conference reviewer for AEJMC. He has also represented graduate students through Michigan State University's University Council and Council of Graduate Students.</p>
+    <p>He holds an M.S. in Journalism and Media Communication from Colorado State University and bachelor's and master's degrees in Mass Communication and Journalism from the University of Dhaka.</p>
+  </header>
+
+  <section id="research">
+    <p class="eyebrow">Research</p>
+    <h2>Publications and presentations</h2>
+
+    <div class="citations">
+      <h3>Published</h3>
+      <p><strong>Zayeef, A.</strong>, &amp; Parks, P. (2026). Naturalizing violence: Media discourse and the limits of journalistic nationalism. <em>Journalism Studies</em>, 1–20. <a href="https://doi.org/10.1080/1461670X.2026.2695130">doi:10.1080/1461670X.2026.2695130</a></p>
+      <p><strong>Zayeef, A.</strong>, &amp; Vos, T. P. (2025). Authoritarian influences: Interactivity within the hierarchy of influences model. <em>Journalism Studies</em>, 1–21. <a href="https://doi.org/10.1080/1461670x.2025.2601234">doi:10.1080/1461670x.2025.2601234</a></p>
+    </div>
+
+    <div class="citations">
+      <h3>Forthcoming and under review</h3>
+      <p><strong>Zayeef, A.</strong>, &amp; Vos, T. P. Proximity and principle: Role and norm negotiation based on embeddedness of journalists. <em>Journalism Practice</em>. <span class="cite-sep">·</span> <span class="cite-status">Accepted</span></p>
+      <p>Parks, P., <strong>Zayeef, A.</strong>, Pettengill, J., &amp; Brown, K. D. "We're journalists, not advocates": Advocacy and strategic ambiguity in U.S. metajournalistic discourse. <em>Journal of Media Ethics</em>. <span class="cite-sep">·</span> <span class="cite-status">Revise &amp; resubmit</span></p>
+    </div>
+
+    <div class="citations">
+      <h3>Conference presentations</h3>
+      <p><strong>Zayeef, A.</strong>, &amp; Vos, T. P. (2026). The demystification mandate: Role, boundary, and embeddedness in the metajournalistic discourse of foreign correspondents in the United States. International Communication Division, AEJMC Annual Conference, New Orleans, LA.</p>
+      <p>Parks, P., Pettengill, J., <strong>Zayeef, A.</strong>, &amp; Brown, K. D. (2026). "We're journalists, not advocates": Advocacy and strategic ambiguity in U.S. metajournalistic discourse. Cultural and Critical Studies Division, AEJMC Annual Conference, New Orleans, LA.</p>
+      <p><strong>Zayeef, A.</strong>, &amp; Vos, T. P. (2025). Proximity and principle: Role and norm negotiation among embedded journalists. Community Journalism Interest Group, AEJMC Annual Conference, San Francisco, CA.</p>
+      <p>Marple, C., Kim, M., Wang, Y., Delle, F., <strong>Zayeef, A.</strong>, &amp; Rhodes, N. (2025). Communication of story world norms in <em>The Devil Wears Prada</em>: A qualitative exploration. Mass Communication Division, ICA Annual Conference, Denver, CO.</p>
+      <p><strong>Zayeef, A.</strong>, &amp; Wolfgang, D. (2023). "Symbol of pride": Subjugation of journalism under power. IAMCR Annual Conference, Lyon, France.</p>
+      <p><strong>Zayeef, A.</strong>, &amp; Wolfgang, D. (2023). Propaganda of press freedom. Political Communication Division, AEJMC Midwinter Conference, Norman, OK.</p>
+      <p><strong>Zayeef, A.</strong> (2023). Maneuvering the DSA: Bangladeshi digital activists' ways of expression on Facebook. World Social Science Association Conference, Tempe, AZ.</p>
+      <p><strong>Zayeef, A.</strong>, &amp; Kodrich, K. (2023). Used and underpaid: A PEC analysis of the journalism profession in Bangladesh. World Social Science Association Conference, Tempe, AZ.</p>
+    </div>
+  </section>
+
+  <section id="investigations">
+    <p class="eyebrow">Selected Investigations</p>
+    <h2>A decade of reporting in Bangladesh</h2>
+    <p>A selection from more than ten years of investigative reporting, most of it for <em>The Daily Prothom Alo</em>. Where an English edition was published, it is linked.</p>
+
+    <p class="beat">Extrajudicial killing and enforced disappearance</p>
+
+    <article class="story">
+      <p class="dateline"><b>Dhaka</b> · 2019 · The Daily Prothom Alo</p>
+      <h3><a href="https://en.prothomalo.com/bangladesh/news/192064/Search-for-%E2%80%98Hercules%E2%80%99-leads-to-govt-vehicle">Search for 'Hercules' leads to govt vehicle</a></h3>
+      <p>An investigation that traced a government vehicle to a staged "crossfire" death and established official involvement in a pattern of extrajudicial killings. Named Best Investigative Reporter by the Crime Reporters Association of Bangladesh and listed by the Global Investigative Journalism Network among the year's best investigative reports from Bangladesh.</p>
+    </article>
+
+    <article class="story">
+      <p class="dateline"><b>Dhaka</b> · 2022 · The Daily Prothom Alo</p>
+      <h3><a href="https://en.prothomalo.com/bangladesh/crime-and-law/the-killings-that-never-see-justice">The killings that never see justice</a></h3>
+      <p>How the families of extrajudicial-killing victims were turned away by the state after they named a law enforcement agency. Awarded the Transparency International Bangladesh Investigative Journalism Award in 2021.</p>
+    </article>
+
+    <article class="story">
+      <p class="dateline"><b>Dhaka</b> · 2017 · The Daily Prothom Alo</p>
+      <h3><a href="https://en.prothomalo.com/bangladesh/news/166714/Abduction-continues-nearly-400-disappear-in-9-yrs">Nearly 400 disappear in nine years</a></h3>
+      <p>A count of the disappeared across nine years that gathered the scale of enforced disappearance from scattered cases into a single record.</p>
+    </article>
+
+    <article class="story">
+      <p class="dateline"><b>Dhaka</b> · 2016 · The Daily Prothom Alo</p>
+      <h3><a href="https://en.prothomalo.com/bangladesh/news/132853/Missing-youths-bring-new-worries">Missing youths bring new worries</a></h3>
+      <p>Reporting on a pattern of young men who went missing, and the fear of enforced disappearance that spread with it.</p>
+    </article>
+
+    <article class="story">
+      <p class="dateline"><b>Dhaka</b> · 2016 · The Daily Prothom Alo</p>
+      <h3><a href="https://en.prothomalo.com/bangladesh/news/127857/Family-pays-Tk-50-lac-in-fear-of-crossfire">British Bangladeshi missing for four months: family pays ransom in fear of 'crossfire'</a></h3>
+      <p>A British-Bangladeshi man vanished for four months while his family paid ransom under the threat that he would otherwise be killed in "crossfire." The story documented abduction for ransom by officers in plainclothes.</p>
+    </article>
+
+    <article class="story">
+      <p class="dateline"><b>Dhaka</b> · 2018 · The Daily Prothom Alo</p>
+      <h3><a href="https://en.prothomalo.com/bangladesh/news/175500/Youth-dies-after-DB-quizzing">Youth dies after DB quizzing</a></h3>
+      <p>A young man's death after interrogation by the Detective Branch, and the questions of accountability it raised.</p>
+    </article>
+
+    <article class="story">
+      <p class="dateline"><b>Dhaka</b> · 2018 · The Daily Prothom Alo</p>
+      <h3><a href="https://en.prothomalo.com/bangladesh/news/171206/9-yr-old-killed-by-police-vehicle">9-yr-old killed by police vehicle</a></h3>
+      <p>The death of a nine-year-old struck by a police vehicle, and the accountability that followed.</p>
+    </article>
+
+    <article class="story">
+      <p class="dateline"><b>Dhaka</b> · 2015 · Dhaka Tribune</p>
+      <h3><a href="https://www.dhakatribune.com/uncategorized/2015/01/17/justice-elusive-for-murder-cover-up-victims-family">Justice elusive for murder cover-up victim's family</a></h3>
+      <p>A long-form account of a family left without justice after a murder was covered up.</p>
+    </article>
+
+    <p class="beat">Militancy and the security forces</p>
+
+    <article class="story">
+      <p class="dateline"><b>Dhaka</b> · 2019 · The Daily Prothom Alo</p>
+      <h3><a href="https://en.prothomalo.com/bangladesh/Militant-Saifullah-Ozaki-in-Iraqi-jail">Saifullah Ozaki is in Iraqi jail</a></h3>
+      <p>The first report of the arrest of Saifullah Ozaki, an academic who recruited Bangladeshis for ISIS and routed them to Syria. International outlets followed the story.</p>
+    </article>
+
+    <article class="story">
+      <p class="dateline"><b>Dhaka</b> · 2014 · Dhaka Tribune</p>
+      <h3><a href="https://www.dhakatribune.com/uncategorized/2014/03/12/rab-grabs-parts-of-reserve-forest-2">RAB 'grabs' parts of reserve forest</a></h3>
+      <p>A report that documented the paramilitary Rapid Action Battalion's encroachment on protected reserve forest.</p>
+    </article>
+
+    <p class="beat">Universities and student politics</p>
+
+    <article class="story">
+      <p class="dateline"><b>Dhaka</b> · 2019 · The Daily Prothom Alo</p>
+      <h3><a href="https://en.prothomalo.com/bangladesh/news/201543/8-DUCSU-leaders-studentship-in-question">8 DUCSU leaders' studentship in question</a></h3>
+      <p>An investigation into how ruling-party student leaders secured university standing through irregular admissions.</p>
+    </article>
+
+    <article class="story">
+      <p class="dateline"><b>Dhaka</b> · 2014 · Dhaka Tribune</p>
+      <h3><a href="https://www.dhakatribune.com/bangladesh/bangladesh-others/80640/presidential-perks">Presidential perks</a></h3>
+      <p>An unexplained-wealth investigation into the president of the Chhatra League, the ruling Awami League's student front, who acquired a microbus, a luxury flat, land, and a palatial village home soon after taking office, despite a prior income of a modest NGO salary.</p>
+    </article>
+
+    <article class="story">
+      <p class="dateline"><b>Dhaka</b> · 2014 · Dhaka Tribune</p>
+      <h3><a href="https://www.dhakatribune.com/bangladesh/bangladesh-others/80778/general-good-fortune">General good fortune</a></h3>
+      <p>A companion investigation into the Chhatra League's general secretary, whose new assets included Dhaka flats, a stake in a news portal, phone and motorbike dealerships secured through political influence, government land in a reserved quota, and firearm licenses granted to a "special person of the state."</p>
+    </article>
+
+    <article class="story">
+      <p class="dateline"><b>Dhaka</b> · 2014 · Dhaka Tribune</p>
+      <h3><a href="https://www.dhakatribune.com/bangladesh/politics/80931/the-veep-stakes">The veep stakes</a></h3>
+      <p>A wider look at the Chhatra League's vice-presidents and their overnight fortunes, from a former footpath shoe vendor who became a flat owner to a brick-kiln operator accused of grabbing land.</p>
+    </article>
+  </section>
+
+  <section id="teaching">
+    <p class="eyebrow">Teaching</p>
+    <h2>Courses</h2>
+    <p class="beat">Instructor of record</p>
+
+    <article class="story">
+      <p class="dateline"><b>JRN 200</b> · Michigan State University · 2024–present</p>
+      <h3>News Reporting and Writing</h3>
+      <p>An introduction to reporting and writing: news judgment, information gathering, interviewing, and ethics. Students develop independent sources in a lab setting and write news across platforms in AP style. He redesigned the syllabus and developed the lectures, assignments, and rubrics.</p>
+    </article>
+
+    <article class="story">
+      <p class="dateline"><b>JRN 345</b> · Michigan State University · Summer 2026</p>
+      <h3>Images and Messages</h3>
+      <p>An analytical, historical, and critical study of visual communication. The course examines the role and effects of imagery in news and documentary work, the ethics of visual messages, the impact of technology on visual journalism, and the aesthetics and cultural belief systems tied to the medium of photography. He built this asynchronous summer course in full, including the video lectures, assignments, and rubrics.</p>
+    </article>
+
+    <p class="beat">Graduate teaching assistant</p>
+
+    <article class="story">
+      <p class="dateline"><b>JRN 108</b> · Michigan State University · 2023–2024</p>
+      <h3>The World of Media</h3>
+      <p>An introduction to the journalism and media industries, from established to emerging forms, with attention to content and audiences, policy and management, the history and structure of the field, media's reciprocal influence with society, and careers, law, ethics, media literacy, and diversity. He facilitated class discussion in a 350-student course, with weekly grading and assessment.</p>
+    </article>
+
+    <article class="story">
+      <p class="dateline"><b>JTC 100</b> · Colorado State University · 2021–2023</p>
+      <h3>Media in Society</h3>
+      <p>An introduction to the historical, economic, and cultural impact of mass media. He facilitated class discussion in sections of more than 250 students, with weekly grading and assessment.</p>
+    </article>
+  </section>
+
+  <section id="honors">
+    <p class="eyebrow">Awards &amp; Honors</p>
+    <h2>Academic and professional recognition</h2>
+
+    <div class="citations">
+      <h3>Academic awards</h3>
+      <p>Top Paper Award (Faculty, 3rd Place), Cultural and Critical Studies Division, AEJMC, for "We're Journalists, Not Advocates" <span class="cite-sep">·</span> <span class="cite-status">2026</span></p>
+      <p>Best Student Paper Award, Community Journalism Interest Group, AEJMC, for "Proximity and Principle" <span class="cite-sep">·</span> <span class="cite-status">2025</span></p>
+      <p>Top Student Paper, Runner-Up, Mass Communication Division, ICA, for "Communication of Story World Norms in <em>The Devil Wears Prada</em>" <span class="cite-sep">·</span> <span class="cite-status">2025</span></p>
+      <p>Certificate of Academic Excellence, National Residence Hall Honorary, Colorado State University <span class="cite-sep">·</span> <span class="cite-status">2022</span></p>
+    </div>
+
+    <div class="citations">
+      <h3>Fellowships and scholarships</h3>
+      <p>AEJMC Mass Communication and Society Division Diversity and Inclusion Career Development Fellow <span class="cite-sep">·</span> <span class="cite-status">$1,200 (2026–2027)</span></p>
+      <p>Dr. Delia Koo Global Student Scholarship, Michigan State University <span class="cite-sep">·</span> <span class="cite-status">$2,000 (2026)</span></p>
+      <p>Ellen L. and Clyde L. Burton Endowed Scholarship in Journalism, Michigan State University <span class="cite-sep">·</span> <span class="cite-status">$3,200 (2026), $1,500 (2025), $1,470 (2024)</span></p>
+      <p>College of Communication Arts &amp; Sciences Endowed Scholarship, Michigan State University <span class="cite-sep">·</span> <span class="cite-status">$1,000 (2026), $1,000 (2025)</span></p>
+      <p>Thorson Doctoral Research Fellowship, Michigan State University <span class="cite-sep">·</span> <span class="cite-status">$2,000 (2025)</span></p>
+      <p>Rasmussen Fellowship, Michigan State University <span class="cite-sep">·</span> <span class="cite-status">$5,000 (2024)</span></p>
+      <p>ComArtSci General Scholarship, Michigan State University <span class="cite-sep">·</span> <span class="cite-status">$1,000 (2024)</span></p>
+    </div>
+
+    <div class="citations">
+      <h3>Grants</h3>
+      <p>Professional Development Fund Award, Department of Journalism and Media Communication, Colorado State University, for travel to the Investigative Reporters and Editors Annual Conference <span class="cite-sep">·</span> <span class="cite-status">$1,375 (2022)</span></p>
+    </div>
+
+    <div class="citations">
+      <h3>Journalism awards</h3>
+      <p>Best Investigative Report from Bangladesh, Global Investigative Journalism Network <span class="cite-sep">·</span> <span class="cite-status">2019, 2020</span></p>
+      <p>Investigative Journalism Award, Transparency International Bangladesh <span class="cite-sep">·</span> <span class="cite-status">2021</span></p>
+      <p>Best Investigative Reporter Award, Crime Reporters Association of Bangladesh <span class="cite-sep">·</span> <span class="cite-status">2019</span></p>
+      <p>Best Investigative Reporter Award, The Daily Prothom Alo <span class="cite-sep">·</span> <span class="cite-status">2019</span></p>
+      <p>Best Emerging Reporter Award, The Daily Prothom Alo <span class="cite-sep">·</span> <span class="cite-status">2018</span></p>
+    </div>
+
+    <div class="citations">
+      <h3>Journalism fellowships</h3>
+      <p>Chevening South Asia Journalism Programme Fellow, University of Westminster, awarded by the UK Foreign, Commonwealth &amp; Development Office <span class="cite-sep">·</span> <span class="cite-status">2021</span></p>
+      <p>Edward R. Murrow Program for Journalists (IVLP), U.S. Department of State <span class="cite-sep">·</span> <span class="cite-status">2020</span></p>
+      <p>Global Investigative Journalism Network Fellow <span class="cite-sep">·</span> <span class="cite-status">2019</span></p>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact">
+  <div class="foot-inner">
+    <div class="foot-links">
+      <a href="mailto:muham134@msu.edu">Email</a>
+      <a href="https://scholar.google.com/citations?hl=en&user=uweDv-sAAAAJ">Google Scholar</a>
+      <a href="https://www.linkedin.com/in/azayeef/">LinkedIn</a>
+      <a href="Zayeef_CV.pdf">Download CV (PDF)</a>
+    </div>
+    <p class="foot-note">CV updated July 2026 · © 2026 Ahmed Zayeef</p>
+  </div>
+</footer>
+
+</body>
+</html>
